@@ -6,25 +6,15 @@ using System.Threading.Tasks;
 
 namespace tdd_oop_polymorphism.CSharp.Main
 {
-    public class Drink
+    public class Drink : IProduct
     {
-        string name;
-        int price;
+        public string Name { get; set; }
+        public int Price { get; set; }
 
         public Drink(string name, int price)
         {
-            this.name = name;
-            this.price = price;
-        }
-
-        public int getPrice()
-        {
-            return this.price;
-        }
-
-        public string getName()
-        {
-            return this.name;
+            Name = name;
+            Price = price;
         }
     }
 }
